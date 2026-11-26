@@ -1,0 +1,61 @@
+format: reelcognito-agent-patches/3
+revision: 7
+version: 2026-11-21.2
+updated_at: 2026-11-22T05:45:59Z
+expires_at: 2026-12-22T05:45:59Z
+vendor_slugs:
+  fandango.com: fandango
+  amctheatres.com: amc
+confirmation_transforms:
+  - id: amc-direct-numeric-confirmation
+    when:
+      vendor: amc
+      booking_domain: amctheatres.com
+      theater_chain: AMC Theatres
+      displayed_confirmation_regex: ^[0-9]+$
+    operation:
+      type: prepend
+      value: A
+    example_in: "1234567890"
+    example_out: A1234567890
+    reason_code: amc_direct_barcode_has_a_prefix
+  - id: fandango-confirmation-passthrough
+    when:
+      vendor: fandango
+      booking_domain: fandango.com
+      theater_chain: AMC Theatres
+      displayed_confirmation_regex: ^A[0-9]+$
+    operation:
+      type: none
+    example_in: A1234567890
+    example_out: A1234567890
+    reason_code: fandango_supplies_barcode_payload
+booking_routes:
+  - id: muse-amc-direct-standard-blocked
+    when:
+      agent: muse
+      booking_domain: amctheatres.com
+      access_method: standard
+    status: observed_blocked
+    observed_on: 2026-11-20
+    reason_code: cloudflare_challenge
+    action: stop_and_offer_alternatives
+    alternative_route_ids:
+      - muse-amc-direct-extension-working
+      - muse-amc-via-fandango-working
+  - id: muse-amc-direct-extension-working
+    when:
+      agent: muse
+      booking_domain: amctheatres.com
+      access_method: chrome_extension
+    status: observed_working
+    observed_on: 2026-11-20
+  - id: muse-amc-via-fandango-working
+    when:
+      agent: muse
+      booking_domain: fandango.com
+      theater_chain: AMC Theatres
+      access_method: standard
+    status: observed_working
+    observed_on: 2026-11-20
+unsupported_theaters: []
