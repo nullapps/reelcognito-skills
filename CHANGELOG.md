@@ -1,5 +1,9 @@
 # Reviewed releases
 
+## Licensing notice
+
+NullApps LLC has licensed the repository’s instructions, documentation, and compatibility data under [CC BY 4.0](LICENSE). The five installation files and installer for `muse-v5-r3` retain their published bytes.
+
 ## muse-v5-r3 · November 26, 2026
 
 Section 10 now uses the dashboard label **Agent Connections**. The main and combined documents carry the v5-r3 suffix. The skill wrapper identifies its installed version, describes the mystery-booking use case, and lets customers finish onboarding when the informational compatibility check fails. The v5 booking safeguards still apply before showing selection and payment.

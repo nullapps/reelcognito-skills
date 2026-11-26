@@ -27,3 +27,17 @@ The service is intended for people in the United States. You must be at least 18
 Keep ticket links private. Anyone with a bearer admission link may be able to use it. Merchant receipts, notifications and theater signage can reveal the film independently of ReelCognito. Keep passwords, card details and agent tokens out of conversations, saved instructions, shared files and support reports. For a lost or exposed token, revoke it in Agent Connections and generate a replacement. [Security](SECURITY.md) · [Privacy policy](https://reelcognito.com/privacy-policy/)
 
 The website publishes current agent instructions. This repository distributes reviewed versions. The YAML bundled with a release is a historical snapshot. Muse checks ReelCognito's live HTTPS feed under the rules of the installed version. [Release history and publication process](CHANGELOG.md) · [Official website](https://reelcognito.com/) · [Support Center](https://reelcognito.zohodesk.com/)
+
+### License
+
+Copyright © 2026 NullApps LLC.
+
+The instructions, documentation, and compatibility data in this repository are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+The ReelCognito name, logos, and other brand identifiers are excluded from this license. All applicable trademark rights are reserved.
+
+This license does not extend to the proprietary ReelCognito application, backend software, infrastructure, or hosted services. Access to and use of the ReelCognito service remain subject to its [Terms of Service](https://reelcognito.com/terms-of-service/).
+
+Modified versions must not falsely imply that they are official ReelCognito releases or endorsed by NullApps LLC.
+
+[Full license text](LICENSE)
