@@ -1,8 +1,24 @@
 # Reviewed releases
 
+## muse-v5-r3 · November 26, 2026
+
+Section 10 now uses the dashboard label **Agent Connections**. The main and combined documents carry the v5-r3 suffix. The skill wrapper identifies its installed version, describes the mystery-booking use case, and lets customers finish onboarding when the informational compatibility check fails. The v5 booking safeguards still apply before showing selection and payment.
+
+The combined file comes from the matching canonical website release candidate. Publish this distribution after verifying the deployed canonical download and dashboard copy controls against the digest below.
+
+| Installation artifact | SHA-256 |
+| --- | --- |
+| SKILL.md | `9a3980f8fd3d35a953321077bb9706496916659d52c68ec415125d5139c3be76` |
+| reelcognito-agent-patches-setup-v5.md | `dce53115a6f3c0b0212bdddbbb55096ca1751a06d0a078d5c3b27c65d886c39a` |
+| reelcognito-agent-patches-v5.yaml | `41dc3609f5d9a62f156be41e3b741935b1ec6c22010ebf78bb2acda6f170c9c8` |
+| reelcognito-agent-setup-combined-v5-r3.md | `b60ad53d2660ec0f6faf364c729fa6e17c6975a8c1cabf725f63bf7bd4cebe0e` |
+| reelcognito-agent-setup-prompt-v5-r3.md | `483e9b7f9de3c5f155cba2ce8248147d09f0ceccc7a7076d067cb796d540f13a` |
+
 ## muse-v5-r2 · November 26, 2026
 
-Packaging revision 2 places the [Muse skill](skills/muse/reelcognito-mystery-movie-nights/SKILL.md) in a folder matching its frontmatter name. The four reviewed v5 artifacts retain the SHA-256 values below. Installation verifies five pinned files and ends. A separate first-use request starts the interview, secure connection setup and live compatibility preflight.
+Packaging revision 2 places the [Muse skill](skills/muse/reelcognito-mystery-movie-nights/SKILL.md) in a folder matching its frontmatter name. The four reviewed v5 artifacts retain the SHA-256 values listed under the original muse-v5 release. Installation verifies five pinned files and ends. A separate first-use request starts the interview, secure connection setup and live compatibility preflight.
+
+The v5-r2 `SKILL.md` SHA-256 is `312889b1e87cdff0ab25e4530faee1b6cd68e33e7c309b5e9c491300266ba065`.
 
 ## muse-v5 · November 26, 2026
 
