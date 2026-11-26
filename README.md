@@ -4,12 +4,17 @@ Let your AI shopping agent choose a movie for you. Pick the theater, time and bu
 
 Muse is the first shopping agent covered by this repository. It interviews you about your tastes, films you have seen, seats, budget and spoiler preferences. After you confirm your rules, Muse can propose a night out and ask for approval of the specific purchase. Your agent books with the merchant. ReelCognito turns the purchased ticket into a mystery pass for Apple Wallet or Google Wallet when issuance succeeds. The pass shows “Mystery Movie” through the previews. Its title update is scheduled for 30 minutes after the advertised showtime and depends on successful wallet processing.
 
-## Set up Muse
+## Install in Muse
 
-1. Open the [ReelCognito v5 release](https://github.com/nullapps/reelcognito-skills/releases/tag/muse-v5). Review the release and follow the **Install with Muse** prompt in its notes. Muse will ask before installing anything.
-2. For a conversation-only setup, open the combined Markdown in the release's source files and paste the text between its two COPY headings into a fresh, private Muse conversation. Add this request to the same message: “Run setup and the anonymous compatibility preflight only. Finish before selecting a showing, paying, or registering a ticket.” The two sections belong together. The [official setup page](https://reelcognito.com/agents/) also offers the current reviewed instructions with a copy button.
-3. Create an account, verify your email, and sign in. Check that Muse offers a supported secure credential connection before generating a token. When it does, open Agent Connections, name the agent and generate a token. Copy it immediately into Muse's supported secure credential connection. If your Muse session lacks that capability, you can complete the interview and resume account setup when a secure connection is available. [Customer dashboard](https://app.reelcognito.com/) · [Agent Connections](https://app.reelcognito.com/settings/tokens)
-4. Answer the interview and confirm your preferences. Muse checks the live compatibility manifest before it presents a showing as purchasable. Setup ends before any booking, payment, or ticket registration.
+Open the [v5 packaging revision 2 release](https://github.com/nullapps/reelcognito-skills/releases/tag/muse-v5-r2) and paste its **Install with Muse** prompt into a private Muse conversation. Muse asks for approval, retrieves five commit-pinned files, checks their SHA-256 fingerprints and verifies the installed copy. A supported persistent skill is saved under the name `reelcognito-mystery-movie-nights`. If persistence is unavailable, Muse can load the verified instructions for this conversation. Installation finishes when Muse reports what it verified. You can stop there without an account or token. [Packaged skill](skills/muse/reelcognito-mystery-movie-nights/SKILL.md)
+
+For a manual conversation-only alternative, copy the text between the two COPY headings in the [combined instructions](skills/muse/reelcognito-mystery-movie-nights/reelcognito-agent-setup-combined-v5.md) from the release. Paste it with this request: “Keep these instructions for this conversation. Wait until I ask to start onboarding before following them. On that separate request, run the interview and the anonymous live preflight under v5 rules, then stop before selecting a showing, paying, or registering a ticket.” The [official setup page](https://reelcognito.com/agents/) also offers the current reviewed text.
+
+## First use and booking
+
+1. When ready, send a **new message**: “Start ReelCognito onboarding.” Answer the interview and confirm your preferences. Muse checks current compatibility using an anonymous request to ReelCognito. It reports whether the preflight passed or what is blocking use.
+2. Register, verify your email and sign in. Check that Muse offers a supported secure credential connection, then open Agent Connections, name the agent and generate a token. Immediately copy the one-time value into that secure connection. If it is unavailable, pause token provisioning. [Customer dashboard](https://app.reelcognito.com/) · [Agent Connections](https://app.reelcognito.com/settings/tokens)
+3. Onboarding ends before a purchase. When you later request a movie night, Muse rechecks the live data under the v5 rules before presenting a purchasable showing and seeks your specific purchase approval.
 
 ## Costs and availability
 
